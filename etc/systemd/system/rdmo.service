@@ -1,0 +1,16 @@
+[Unit]
+Description=RDMO gunicorn daemon
+After=network.target
+
+[Service]
+User=rdmo
+Group=rdmo
+
+WorkingDirectory=/srv/rdmo/rdmo.jochenklar.dev
+EnvironmentFile=/srv/rdmo/rdmo.jochenklar.dev/.env
+
+ExecStart=/srv/rdmo/env/bin/gunicorn \
+    --bind unix:/tmp/rdmo.sock config.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
