@@ -105,6 +105,7 @@ GITHUB_PROVIDER = {
 }
 
 GITLAB_PROVIDER = {
+    'gitlab_url': os.getenv('GITLAB_PROVIDER_URL'),
     'client_id': os.getenv('GITLAB_PROVIDER_CLIENT_ID'),
     'client_secret': os.getenv('GITLAB_PROVIDER_CLIENT_SECRET')
 }
