@@ -1,17 +1,4 @@
-RDMO - Research Data Management Organiser
-=========================================
+rdmo.jochenklar.dev
+===================
 
-RDMO is a tool to support the systematic planning, organisation and implementation of the data management throughout the course of a research project. RDMO is funded by the Deutsche Forschungsgemeinschaft (DFG).
-
-<dl>
-  <dt>Home Page</dt>
-  <dd><a href="https://rdmorganiser.github.io">https://rdmorganiser.github.io</a></dd>
-  <dt>Source code</dt>
-  <dd><a href="https://github.com/rdmorganiser/rdmo">https://github.com/rdmorganiser/rdmo</a></dd>
-  <dt>Documentation</dt>
-  <dd><a href="http://rdmo.readthedocs.io">http://rdmo.readthedocs.io</a></dd>
-  <dt>Demo</dt>
-  <dd><a href="https://rdmo.aip.de">https://rdmo.aip.de</a></dd>
-</dl>
-
-This repository contains the `rdmo-app`, to be forked and used together with `rdmo`.
+This is the `rdmo-app` running at rdmo.jochenklar.dev. Different from the default `rdmo-app`, `config/settings/local.py` is part of the repository, and the secrets are provided as environment variables from a `.env` file.

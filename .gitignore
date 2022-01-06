@@ -6,7 +6,6 @@ __pycache__/
 *.swp
 .DS_*
 
-/config/settings/local.py
 /static_root
 /media_root
 /vendor
@@ -21,3 +20,4 @@ __pycache__/
 /theme
 /plugins
 /.pytest_cache
+/.env

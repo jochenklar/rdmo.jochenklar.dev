@@ -1,0 +1,30 @@
+{% load i18n %}
+
+{% if can_change_project %}
+<form method="POST" action="{% url 'project_update_catalog' project.id %}"
+      id="project-catalog-form"
+      class="form-inline" style="margin-bottom: 10px;">
+    {% csrf_token %}
+    <div class="form-group">
+        <select id="project-catalog-select" class="form-control" name="catalog">
+            {% for catalog in catalogs %}
+            <option value="{{ catalog.id }}"
+                    {% if catalog == project.catalog %}selected{% endif %}>
+                {{ catalog.title }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+</form>
+<script>
+    $(document).ready(function() {
+        $('#project-catalog-select').change(function() {
+            $('#project-catalog-form').submit();
+        });
+    });
+</script>
+{% else %}
+<strong>{{ project.catalog.title }}</strong><br/>
+{% endif %}
+
+{{ project.catalog.help }}
