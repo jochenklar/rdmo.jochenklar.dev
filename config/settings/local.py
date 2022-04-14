@@ -3,7 +3,8 @@ from email.utils import getaddresses
 
 from django.utils.translation import ugettext_lazy as _
 
-from rdmo.core.settings import INSTALLED_APPS, AUTHENTICATION_BACKENDS, PROJECT_EXPORTS, PROJECT_IMPORTS, QUESTIONS_WIDGETS
+from rdmo.core.settings import INSTALLED_APPS, MIDDLEWARE, AUTHENTICATION_BACKENDS, \
+                               PROJECT_EXPORTS, PROJECT_IMPORTS, QUESTIONS_WIDGETS
 
 
 DEBUG = os.getenv('DEBUG', '').upper() == 'TRUE'
@@ -65,6 +66,11 @@ INSTALLED_APPS += [
 ]
 
 AUTHENTICATION_BACKENDS.append('allauth.account.auth_backends.AuthenticationBackend')
+
+MIDDLEWARE.insert(
+    MIDDLEWARE.index('django.middleware.security.SecurityMiddleware') + 1,
+    'whitenoise.middleware.WhiteNoiseMiddleware'
+)
 
 PROJECT_SEND_ISSUE = True
 
