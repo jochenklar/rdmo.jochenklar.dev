@@ -9,8 +9,29 @@ Group=rdmo
 WorkingDirectory=/srv/rdmo/rdmo.jochenklar.dev
 EnvironmentFile=/srv/rdmo/rdmo.jochenklar.dev/.env
 
-ExecStart=/srv/rdmo/env/bin/gunicorn \
-    --bind unix:/tmp/rdmo.sock config.wsgi:application
+LogsDirectory=gunicorn/rdmo django/rdmo
+RuntimeDirectory=gunicorn/rdmo
+
+Environment=GUNICORN_BIN=env/bin/gunicorn
+Environment=GUNICORN_WORKER=3
+Environment=GUNICORN_TIMEOUT=3
+Environment=GUNICORN_BIND=unix:/run/gunicorn/rdmo/rdmo.sock
+Environment=GUNICORN_PID_FILE=/run/gunicorn/rdmo/rdmo.pid
+Environment=GUNICORN_ACCESS_LOG_FILE=/var/log/gunicorn/rdmo/access.log
+Environment=GUNICORN_ERROR_LOG_FILE=/var/log/gunicorn/rdmo/error.log
+
+ExecStart=/bin/sh -c '${GUNICORN_BIN} \
+  --workers ${GUNICORN_WORKER} \
+  --timeout ${GUNICORN_TIMEOUT} \
+  --bind ${GUNICORN_BIND} \
+  --pid ${GUNICORN_PID_FILE} \
+  --access-logfile ${GUNICORN_ACCESS_LOG_FILE} \
+  --error-logfile ${GUNICORN_ERROR_LOG_FILE} \
+  config.wsgi:application'
+
+ExecReload=/bin/sh -c '/usr/bin/pkill -HUP -F ${GUNICORN_PID_FILE}'
+
+ExecStop=/bin/sh -c '/usr/bin/pkill -TERM -F ${GUNICORN_PID_FILE}'
 
 [Install]
 WantedBy=multi-user.target

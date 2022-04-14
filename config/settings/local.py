@@ -85,14 +85,21 @@ PROJECT_QUESTIONS_AUTOSAVE = True
 PROJECT_EXPORTS += [
     ('madmp', _('as maDMP JSON'), 'rdmo_plugins.exports.madmp.MaDMPExport'),
     ('datacite', _('as DataCite XML'), 'rdmo_plugins.exports.datacite.DataCiteExport'),
-    ('radar', _('as RADAR XML'), 'rdmo_plugins.exports.radar.RadarExport')
++    ('radar-xml', _('as RADAR XML'), 'rdmo_plugins.exports.radar.RadarExport'),
++    ('radar', _('directly to RADAR'), 'rdmo_plugins.exports.radar.RadarExportProvider'),
++    ('zenodo', _('directly to Zenodo'), 'rdmo_plugins.exports.zenodo.ZenodoExportProvider')
+
+
 ]
 
 PROJECT_IMPORTS += [
     ('madmp', _('from maDMP'), 'rdmo_plugins.imports.madmp.MaDMPImport'),
     ('datacite', _('from DataCite XML'), 'rdmo_plugins.imports.datacite.DataCiteImport'),
     ('radar', _('from RADAR XML'), 'rdmo_plugins.imports.radar.RadarImport'),
+    ('url', _('from URL'), 'rdmo.projects.imports.URLImport')
 ]
+
+PROJECT_IMPORTS_LIST = ['url']
 
 OPTIONSET_PROVIDERS = [
     ('re3data', _('Repositories from re3data'), 'rdmo_re3data.providers.Re3DataProvider'),
@@ -114,6 +121,18 @@ GITLAB_PROVIDER = {
     'gitlab_url': os.getenv('GITLAB_PROVIDER_URL'),
     'client_id': os.getenv('GITLAB_PROVIDER_CLIENT_ID'),
     'client_secret': os.getenv('GITLAB_PROVIDER_CLIENT_SECRET')
+}
+
+RADAR_PROVIDER = {
+    'radar_url': os.getenv('RADAR_PROVIDER_URL'),
+    'client_id': os.getenv('RADAR_PROVIDER_CLIENT_ID'),
+    'client_secret': os.getenv('RADAR_PROVIDER_CLIENT_SECRET'),
+    'redirect_uri': os.getenv('RADAR_PROVIDER_REDIRECT_URI')
+}
+
+ZENODO_PROVIDER = {
+    'client_id': os.getenv('ZENODO_PROVIDER_CLIENT_SECRET'),
+    'client_secret':  os.getenv('ZENODO_PROVIDER_REDIRECT_URI')
 }
 
 QUESTIONS_WIDGETS += [
