@@ -11,13 +11,6 @@ __pycache__/
 /vendor
 /log
 /env
-/env2
-/env3
 /*.sqlite3
-/.coverage
-/htmlcov
-/themes
-/theme
-/plugins
-/.pytest_cache
+/*.sh
 /.env
