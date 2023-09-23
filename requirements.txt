@@ -1,5 +1,1 @@
-# pip requirements, except rdmo
-gunicorn==20.1.0
-python-dotenv==0.18.0
-psycopg2-binary==2.9.1
-whitenoise==6.0.0
+rdmo[allauth,gunicorn,postgres]

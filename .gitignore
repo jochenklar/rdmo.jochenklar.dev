@@ -6,6 +6,7 @@ __pycache__/
 *.swp
 .DS_*
 
+/config/settings/local.py
 /static_root
 /media_root
 /vendor
