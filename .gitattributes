@@ -1,1 +1,1 @@
-config/settings/environments/production.py filter=git-crypt diff=git-crypt
+config/settings/environments/* filter=git-crypt diff=git-crypt

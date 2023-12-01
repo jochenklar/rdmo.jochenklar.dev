@@ -54,8 +54,3 @@ OPTIONSET_PROVIDERS = [
     ('mesh_descriptors', _('Medical Subject Headings (MeSH) descriptors'), 'rdmo_mesh.providers.DescriptorProvider'),
     ('mesh_qualifiers', _('Medical Subject Headings (MeSH) qualifiers'), 'rdmo_mesh.providers.QualifierProvider')
 ]
-
-SERVICE_PROVIDERS = [
-    ('github', _('GitHub'), 'rdmo.services.providers.GitHubProvider'),
-    ('gitlab', _('GitLab'), 'rdmo.services.providers.GitLabProvider')
-]
