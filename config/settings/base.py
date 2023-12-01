@@ -47,7 +47,7 @@ PROJECT_IMPORTS += [
     ('url', _('from URL'), 'rdmo.projects.imports.URLImport')
 ]
 
-PROJECT_IMPORTS_LIST = ['url']
+PROJECT_IMPORTS_LIST = ['url', 'github', 'gitlab']
 
 PROJECT_ISSUE_PROVIDERS = [
     ('github', _('GitHub Provider'), 'rdmo_github.providers.GitHubIssueProvider'),
