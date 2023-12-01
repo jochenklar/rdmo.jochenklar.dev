@@ -44,7 +44,9 @@ PROJECT_IMPORTS += [
     ('madmp', _('from maDMP'), 'rdmo_plugins.imports.madmp.MaDMPImport'),
     ('datacite', _('from DataCite XML'), 'rdmo_plugins.imports.datacite.DataCiteImport'),
     ('radar', _('from RADAR XML'), 'rdmo_plugins.imports.radar.RadarImport'),
-    ('url', _('from URL'), 'rdmo.projects.imports.URLImport')
+    ('url', _('from URL'), 'rdmo.projects.imports.URLImport'),
+    ('github', _('from GitHub'), 'rdmo_github.providers.GitHubImport'),
+    ('gitlab', _('from GitLab'), 'rdmo_gitlab.providers.GitLabImport')
 ]
 
 PROJECT_IMPORTS_LIST = ['url', 'github', 'gitlab']
