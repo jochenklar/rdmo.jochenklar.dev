@@ -12,7 +12,6 @@ EnvironmentFile=/srv/rdmo/rdmo.jochenklar.dev/.env
 LogsDirectory=gunicorn/rdmo django/rdmo
 RuntimeDirectory=gunicorn/rdmo
 
-Environment=DJANGO_ENV=production
 Environment=GUNICORN_BIN=env/bin/gunicorn
 Environment=GUNICORN_WORKER=3
 Environment=GUNICORN_TIMEOUT=3
