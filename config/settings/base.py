@@ -49,6 +49,12 @@ PROJECT_IMPORTS += [
 
 PROJECT_IMPORTS_LIST = ['url']
 
+PROJECT_ISSUE_PROVIDERS = [
+    ('github', _('GitHub Provider'), 'rdmo_github.providers.GitHubIssueProvider'),
+    ('gitlab', _('GitLab Provider'), 'rdmo_gitlab.providers.GitLabIssueProvider'),
+    ('openproject', _('OpenProject Provider'), 'rdmo_openproject.providers.OpenProjectIssueProvider'),
+]
+
 OPTIONSET_PROVIDERS = [
     ('re3data', _('Repositories from re3data'), 'rdmo_re3data.providers.Re3DataProvider'),
     ('mesh_descriptors', _('Medical Subject Headings (MeSH) descriptors'), 'rdmo_mesh.providers.DescriptorProvider'),
