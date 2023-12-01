@@ -1,3 +1,60 @@
+DEBUG = False
+
+SECRET_KEY = ''
+
+ALLOWED_HOSTS = ['localhost', 'ip6-localhost', '127.0.0.1', '[::1]',
+                 'rdmo.jochenklar.de', 'rdmo.jochenklar.dev']
+
+ADMINS = []
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'rdmo'
+    }
+}
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = ''
+EMAIL_PORT = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = ''
+EMAIL_USE_SSL = ''
+DEFAULT_FROM_EMAIL = ''
+
+EMAIL_RECIPIENTS_CHOICES = [('mail@jochenklar.de', 'Jochen Klar <mail@jochenklar.de>')]
+
+GITHUB_PROVIDER = {
+    'client_id': '',
+    'client_secret': ''
+}
+
+GITLAB_PROVIDER = {
+    'gitlab_url': '',
+    'client_id': '',
+    'client_secret': ''
+}
+
+RADAR_PROVIDER = {
+    'radar_url': '',
+    'client_id': '',
+    'client_secret': ''
+}
+
+ZENODO_PROVIDER = {
+    'zenodo_url': '',
+    'client_id': '',
+    'client_secret': ''
+}
+
+OPENPROJECT_PROVIDER = {
+    'openproject_url': '',
+    'client_id': '',
+    'client_secret': ''
+}
+
+LOGGING_PATH = '/var/log/rdmo'
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
@@ -29,13 +86,13 @@ LOGGING = {
         'error_log': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': f'{LOGGING_DIR}/error.log',
+            'filename': f'{LOGGING_PATH}/error.log',
             'formatter': 'default'
         },
         'rdmo_log': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': f'{LOGGING_DIR}/rdmo.log',
+            'filename': f'{LOGGING_PATH}/rdmo.log',
             'formatter': 'name'
         },
         'console': {
