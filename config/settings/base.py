@@ -7,7 +7,7 @@ LANGUAGES = (
     ('de', _('German')),
     ('fr', _('French')),
     ('it', _('Italian')),
-    ('it', _('Spanish'))
+    ('es', _('Spanish'))
 )
 
 ACCOUNT = True
