@@ -10,8 +10,8 @@ LANGUAGES = (
     ('es', _('Spanish'))
 )
 
-ACCOUNT = True
-ACCOUNT_SIGNUP = True
+ACCOUNT = False
+ACCOUNT_SIGNUP = False
 ACCOUNT_TERMS_OF_USE = False
 
 SOCIALACCOUNT = True
@@ -30,8 +30,6 @@ AUTHENTICATION_BACKENDS.append('allauth.account.auth_backends.AuthenticationBack
 MIDDLEWARE.append('allauth.account.middleware.AccountMiddleware')
 
 PROJECT_SEND_ISSUE = True
-
-PROJECT_QUESTIONS_AUTOSAVE = True
 
 PROJECT_EXPORTS += [
     ('madmp', _('as maDMP JSON'), 'rdmo_plugins.exports.madmp.MaDMPExport'),
