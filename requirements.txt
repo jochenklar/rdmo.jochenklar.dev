@@ -1,5 +1,7 @@
 rdmo[allauth,gunicorn,postgres]
 git+https://github.com/rdmorganiser/rdmo-plugins
-git+https://github.com/rdmorganiser/rdmo-github
-git+https://github.com/rdmorganiser/rdmo-gitlab
-git+https://github.com/rdmorganiser/rdmo-openproject
+git+https://github.com/rdmorganiser/rdmo-plugins-github
+git+https://github.com/rdmorganiser/rdmo-plugins-gitlab
+git+https://github.com/rdmorganiser/rdmo-plugins-openproject
+git+https://github.com/rdmorganiser/rdmo-plugins-zenodo
+git+https://github.com/rdmorganiser/rdmo-plugins-radar
