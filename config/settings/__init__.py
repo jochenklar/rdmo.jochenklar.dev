@@ -27,8 +27,5 @@ if BASE_URL:
     ACCOUNT_LOGOUT_REDIRECT_URL = BASE_URL
 
     CSRF_COOKIE_PATH = BASE_URL
-    CSRF_COOKIE_NAME = 'csrftoken_' + BASE_URL.replace('/', '_').strip('_')
     LANGUAGE_COOKIE_PATH = BASE_URL
-    LANGUAGE_COOKIE_NAME = 'django_language_' + BASE_URL.replace('/', '_').strip('_')
     SESSION_COOKIE_PATH = BASE_URL
-    SESSION_COOKIE_NAME = 'sessionid_' + BASE_URL.replace('/', '_').strip('_')
