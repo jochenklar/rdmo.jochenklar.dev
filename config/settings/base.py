@@ -26,3 +26,5 @@ INSTALLED_APPS += [
 
 AUTHENTICATION_BACKENDS.append('allauth.account.auth_backends.AuthenticationBackend')
 MIDDLEWARE.append('allauth.account.middleware.AccountMiddleware')
+
+VENDOR_CDN = False
