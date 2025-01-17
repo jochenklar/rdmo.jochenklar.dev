@@ -5,3 +5,7 @@ git+https://github.com/rdmorganiser/rdmo-plugins-gitlab
 git+https://github.com/rdmorganiser/rdmo-plugins-openproject
 git+https://github.com/rdmorganiser/rdmo-plugins-zenodo
 git+https://github.com/rdmorganiser/rdmo-plugins-radar
+git+https://github.com/rdmorganiser/rdmo-plugins-orcid
+git+https://github.com/rdmorganiser/rdmo-plugins-ror
+git+https://github.com/rdmorganiser/rdmo-plugins-gnd
+git+https://github.com/rdmorganiser/rdmo-plugins-wikidata
