@@ -1,14 +1,11 @@
-from django.utils.translation import gettext_lazy as _
+# add theme
 
-INSTALLED_APPS = ['rdmo_jochenklar', *INSTALLED_APPS]
+INSTALLED_APPS = [
+    'rdmo_jochenklar',
+    *INSTALLED_APPS
+]
 
-LANGUAGES = (
-    ('en', _('English')),
-    ('de', _('German')),
-    ('fr', _('French')),
-    ('it', _('Italian')),
-    ('es', _('Spanish'))
-)
+# enable allauth
 
 ACCOUNT = True
 ACCOUNT_SIGNUP = False
@@ -26,5 +23,3 @@ INSTALLED_APPS += [
 
 AUTHENTICATION_BACKENDS.append('allauth.account.auth_backends.AuthenticationBackend')
 MIDDLEWARE.append('allauth.account.middleware.AccountMiddleware')
-
-VENDOR_CDN = False

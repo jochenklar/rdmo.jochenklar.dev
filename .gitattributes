@@ -1,1 +1,0 @@
-config/settings/environments/* filter=git-crypt diff=git-crypt
