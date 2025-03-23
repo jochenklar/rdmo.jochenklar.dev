@@ -13,8 +13,7 @@ STATIC_ROOT = BASE_DIR / 'static_root'
 
 # the list of included files can be extended to accommodate a more complex setup
 include(
-    'base.py',
-    'local.py'
+    optional('local.py')
 )
 
 # prepend the BASE_URL to the different URL settings
