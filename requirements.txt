@@ -1,4 +1,4 @@
-rdmo[allauth,gunicorn,postgres]
+rdmo[allauth,gunicorn,openapi,postgres]
 git+https://github.com/rdmorganiser/rdmo-plugins
 git+https://github.com/rdmorganiser/rdmo-plugins-github
 git+https://github.com/rdmorganiser/rdmo-plugins-gitlab
